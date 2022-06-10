@@ -1,0 +1,20 @@
+.layoutContainer {
+  display: flex;
+
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.leftBar {
+  width: 13%;
+  background-color: lightgray;
+}
+
+.rightBar {
+  width: 13%;
+  background-color: lightgray;
+}
+
+.mainBar {
+  width: 100%;
+}
