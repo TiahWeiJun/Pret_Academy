@@ -14,6 +14,7 @@ import Day9Page from "./pages/Day9/day9";
 import Day10Page from "./pages/Day10/day10";
 import CompletionPage from "./pages/CompletionPage/completionPage";
 import GameOverPage from "./pages/GameOverPage/gameOverPage";
+import ConsequencePage from "./pages/ConsequencePage/consequencePage";
 
 const App = () => {
   const [totalBalance, setTotalBalance] = useState(1000);
@@ -40,6 +41,7 @@ const App = () => {
         <Route path="/10" element={<Day10Page />} />
         <Route path="/completion" element={<CompletionPage />} />
         <Route path="/gameOver" element={<GameOverPage />} />
+        <Route path="/consequence" element={<ConsequencePage />} />
       </Routes>
     </BrowserRouter>
   );
