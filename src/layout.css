@@ -3,16 +3,17 @@
 
   height: 100vh;
   justify-content: space-between;
+  background-color: #f08a98;
 }
 
 .leftBar {
   width: 13%;
-  background-color: lightgray;
+  border: 1px solid black;
 }
 
 .rightBar {
   width: 13%;
-  background-color: lightgray;
+  border: 1px solid black;
 }
 
 .mainBar {
