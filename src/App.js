@@ -15,9 +15,12 @@ import Day10Page from "./pages/Day10/day10";
 import CompletionPage from "./pages/CompletionPage/completionPage";
 import GameOverPage from "./pages/GameOverPage/gameOverPage";
 import ConsequencePage from "./pages/ConsequencePage/consequencePage";
+import { createContext } from "react";
+
+export const AppContext = createContext("Unknown");
 
 const App = () => {
-  const [totalBalance, setTotalBalance] = useState(1000);
+  const [totalBalance, setTotalBalance] = useState(600);
   const [day, setDay] = useState(1);
   const [familyStrike, setFamilyStrike] = useState(0);
   const [healthStrike, setHealthStrike] = useState(0);
@@ -25,25 +28,36 @@ const App = () => {
   const [socialStrike, setSocialStrike] = useState(0);
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
+    <AppContext.Provider
+      value={{
+        day,
+        totalBalance,
+        familyStrike,
+        healthStrike,
+        workStrike,
+        socialStrike,
+      }}
+    >
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
 
-        <Route path="/1" element={<Day1Page />} />
-        <Route path="/2" element={<Day2Page />} />
-        <Route path="/3" element={<Day3Page />} />
-        <Route path="/4" element={<Day4Page />} />
-        <Route path="/5" element={<Day5Page />} />
-        <Route path="/6" element={<Day6Page />} />
-        <Route path="/7" element={<Day7Page />} />
-        <Route path="/8" element={<Day8Page />} />
-        <Route path="/9" element={<Day9Page />} />
-        <Route path="/10" element={<Day10Page />} />
-        <Route path="/completion" element={<CompletionPage />} />
-        <Route path="/gameOver" element={<GameOverPage />} />
-        <Route path="/consequence" element={<ConsequencePage />} />
-      </Routes>
-    </BrowserRouter>
+          <Route path="/1" element={<Day1Page />} />
+          <Route path="/2" element={<Day2Page />} />
+          <Route path="/3" element={<Day3Page />} />
+          <Route path="/4" element={<Day4Page />} />
+          <Route path="/5" element={<Day5Page />} />
+          <Route path="/6" element={<Day6Page />} />
+          <Route path="/7" element={<Day7Page />} />
+          <Route path="/8" element={<Day8Page />} />
+          <Route path="/9" element={<Day9Page />} />
+          <Route path="/10" element={<Day10Page />} />
+          <Route path="/completion" element={<CompletionPage />} />
+          <Route path="/gameOver" element={<GameOverPage />} />
+          <Route path="/consequence" element={<ConsequencePage />} />
+        </Routes>
+      </BrowserRouter>
+    </AppContext.Provider>
   );
 };
 
