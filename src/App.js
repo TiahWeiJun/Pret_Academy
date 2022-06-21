@@ -16,6 +16,7 @@ import CompletionPage from "./pages/CompletionPage/completionPage";
 import GameOverPage from "./pages/GameOverPage/gameOverPage";
 import ConsequencePage from "./pages/ConsequencePage/consequencePage";
 import { createContext } from "react";
+import ContactPage from "./pages/ContactPage/contactPage";
 
 export const AppContext = createContext("Unknown");
 
@@ -55,6 +56,7 @@ const App = () => {
           <Route path="/completion" element={<CompletionPage />} />
           <Route path="/gameOver" element={<GameOverPage />} />
           <Route path="/consequence" element={<ConsequencePage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </BrowserRouter>
     </AppContext.Provider>
