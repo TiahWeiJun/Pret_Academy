@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./layout.css";
+import { AppContext } from "./App";
 
 const Layout = ({ children }) => {
+  const {
+    day,
+    totalBalance,
+    familyStrike,
+    healthStrike,
+    workStrike,
+    socialStrike,
+  } = useContext(AppContext);
   return (
     <div className="layoutContainer">
     <div className="leftBar">
