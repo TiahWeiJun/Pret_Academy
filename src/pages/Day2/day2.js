@@ -4,7 +4,7 @@ import Layout from "../../layout";
 const Day2Page = (props) => {
   return (
     <Layout>
-      <p>Question2</p>
+      <p>question2</p>
     </Layout>
   );
 };
