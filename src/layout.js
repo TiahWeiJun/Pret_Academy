@@ -1,18 +1,42 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./layout.css";
+import { AppContext } from "./App";
 
 const Layout = ({ children }) => {
+  const {
+    day,
+    totalBalance,
+    familyStrike,
+    healthStrike,
+    workStrike,
+    socialStrike,
+  } = useContext(AppContext);
   return (
     <div className="layoutContainer">
-      <div className="leftBar">
-        <p>Strikes</p>
-        <p>Balance</p>
+    <div className="leftBar">
+        <b><div>Balance</div></b>
+        
+        <div className="size"><b><span><span className="dollar">$</span>600</span> </b></div>
+    
+        <div className="bottom"></div>    
+        <b><div>Strikes</div></b>
+        <span className="spacing">Family(1)</span>
+        <span className="spacing">Health(1)</span>
+         <span className="spacing">Work(1)</span>
+         <span className="spacing">Social(1)</span> 
+       
       </div>
+    
+       
       <div className="mainBar">{children}</div>
 
+
       <div className="rightBar">
-        <p>Days</p>
-        <p>Timer</p>
+        <b><p>Days</p></b>
+        <span>10days</span>
+        <div className="down"></div>
+        <b><p>Timer</p></b>
+        <span>20seconds</span>
       </div>
     </div>
   );

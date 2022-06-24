@@ -14,6 +14,15 @@ const Day1Page = (props) => {
     // -2$ 
   }
   
+  const {
+    day,
+    totalBalance,
+    familyStrike,
+    healthStrike,
+    workStrike,
+    socialStrike,
+  } = props;
+  
   return (
     <Layout>
       <p className="day1">

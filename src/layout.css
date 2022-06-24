@@ -1,21 +1,51 @@
 .layoutContainer {
-  display: flex;
+   display: flex;
 
-  height: 100vh;
-  justify-content: space-between;
+   height: 100vh;
+   justify-content: space-between;
   background-color: #f08a98;
 }
 
 .leftBar {
+  font-size: 18px;
+  color: whitesmoke;
   width: 13%;
   border: 1px solid black;
+  display:flex;
+  align-items: center;
+  flex-direction: column;
 }
 
+.dollar{
+  color:#95AE23;
+}
+.size{
+  font-size: 63px;
+}
+.bottom{
+  padding-top: 30px;
+}
+
+.spacing{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.down{
+  padding:50px
+}
 .rightBar {
+  color: whitesmoke;
+  font-size: 20px;
   width: 13%;
   border: 1px solid black;
+  display:flex;
+  align-items: center;
+  flex-direction: column;
 }
+
 
 .mainBar {
   width: 100%;
 }
+
+
