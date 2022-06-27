@@ -16,7 +16,7 @@ const HomePage = () => {
         </div>
         <div className="babydiv">
           <div className="introtext" id="background">
-            back ground information
+            Background
           </div>
           <ul>
             <li>42 year old women</li>
@@ -30,13 +30,15 @@ const HomePage = () => {
             </li>
             <li>Minimal work experience due to care-giving responsibilities</li>
             <li>Last did part time before daughter was born 8 years ago</li>
-            <li>Family only has $600 of saving left</li>
+            <li>
+              Family only has <b>$600</b> of saving left
+            </li>
           </ul>
         </div>
       </div>
       <div>
         <div className="buttonspace" onClick={nextPage}>
-          <p className="startbutton">Accept the challenge</p>
+          Accept the challenge
         </div>
       </div>
     </div>

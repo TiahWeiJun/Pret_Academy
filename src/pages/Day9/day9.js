@@ -1,36 +1,64 @@
 import React, { useContext } from "react";
-import "./day9.css";
+import "../Day1/day1.css";
 import { useNavigate } from "react-router-dom";
 import Layout from "../../layout";
+import { AppContext } from "../../App";
 
-const Day9Page = (props) => {
-  const Navigate = useNavigate()
-  const greennextPage  = () => {
-    Navigate('/consequence')
+const Day9Page = () => {
+  const {
+    day,
+    setDay,
+    totalBalance,
+    setTotalBalance,
+    familyStrike,
+    setFamilyStrike,
+    healthStrike,
+    setHealthStrike,
+    workStrike,
+    setWorkStrike,
+    socialStrike,
+    setSocialStrike,
+    playAlarm,
+    setPlayAlarm,
+    strikeTitle,
+    setStrikeTitle,
+    message1,
+    setMessage1,
+    message2,
+    setMessage2,
+    message3,
+    setMessage3,
+    warning,
+    setWarning,
+  } = useContext(AppContext);
+
+  const Navigate = useNavigate();
+  const greennextPage = () => {
+    Navigate("/consequence");
     // -10$
-  }
-  const pinknextPage  = () => {
-    Navigate('/consequence')
-    // -2$ 
-  }
-  
+  };
+  const pinknextPage = () => {
+    Navigate("/consequence");
+    // -2$
+  };
+
   return (
     <Layout>
-      <p className="day9">
-        <div className="question"><p id="situation">Situation: </p>  Your prepaid card is out of credits</div>
-      </p>
-      <div className="centraldiv">
-        <div className="ans">
-          <div className="greenans-n" onClick={greennextPage}>
-          <div className="cost">-20$</div>
+      <div className="day1">
+        <div className="question">
+          <p id="situation">Situation: </p> Your prepaid card is out of credits
+        </div>
+        <div className="centerdiv">
+          <div className="greenans-one" onClick={greennextPage}>
+            <div className="cost">-20$</div>
             <p id="g">Top up to stay connected</p>
           </div>
-          <div className="pinkans-n" onClick={pinknextPage}>
+          <div className="pinkans-one" onClick={pinknextPage}>
             <div className="cost">-0$</div>
             <p id="p">Be uncontactable</p>
-            </div>
+          </div>
         </div>
-        </div>
+      </div>
     </Layout>
   );
 };

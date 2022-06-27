@@ -1,66 +1,67 @@
-.centraldiv{
-    display: flex;
-    background-color: #F08A98;
-    flex-direction: column;
+/* .centraldiv {
+  display: flex;
+  background-color: #f08a98;
+  flex-direction: column;
 }
-.question{
-    font-size: 50px;
+.question {
+  font-size: 50px;
 }
-.ans{
-    display: flex;
-    margin-top: -30%;
-    flex-direction: row;
-    justify-content: space-between;
+.ans {
+  display: flex;
+  margin-top: -30%;
+  flex-direction: row;
+  justify-content: space-between;
 }
-.greenans{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    height: 25vh;
-    width: 40vw;
-    font-size: 250%;
-}
-
-#situation{
-    text-decoration: underline;
+.greenans {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 25vh;
+  width: 45%;
+  font-size: 45px;
 }
 
-.greenans:hover{
-    background-color: #B3C561;
+#situation {
+  text-decoration: underline;
 }
 
-.pinkans{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    height: 25vh;
-    width: 40vw;
-    font-size: 480%;
+.greenans:hover {
+  background-color: #b3c561;
+  cursor: pointer;
 }
-.pinkans:hover{
-    background-color: #F6B9C1;
+
+.pinkans {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 25vh;
+  width: 45%;
+  font-size: 45px;
 }
-.cost{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
-    width: 180px;
-    background-color: #FFEFB2;
-    border-radius: 100%;
-    margin-left: 20px;
+.pinkans:hover {
+  background-color: #f6b9c1;
+  cursor: pointer;
 }
-#g{
-    background-color:white;
-    border: 4px solid #95AE23;
-    color: #95AE23;
-    margin-right: 20px;
+.cost {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  background-color: #ffefb2;
+  border-radius: 100px;
 }
-#p{
-    background-color:white;
-    border: 4px solid #EB5C70;
-    margin-right: 20px;
-    color:#EB5C70;
+#g {
+  background-color: white;
+  border: 4px solid #95ae23;
+  color: #95ae23;
+  margin-right: 20px;
 }
+#p {
+  background-color: white;
+  border: 4px solid #eb5c70;
+  margin-right: 20px;
+  color: #eb5c70;
+} */

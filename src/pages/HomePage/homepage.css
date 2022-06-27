@@ -1,63 +1,59 @@
-.centraldiv{
-    background-color: #F6B9C1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+.centraldiv {
+  background-color: #f08a98;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
-.introtext{
-    text-align: center;
+.introtext {
+  text-align: center;
 }
-.spacearounddiv{
-    /*border: 2px solid green;*/
-    align-items: center;
-    display: flex;
-    justify-content: center;
+.spacearounddiv {
+  /*border: 2px solid green;*/
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
-#background{
-    font-size: 30px;
+#background {
+  font-size: 30px;
 }
-#gamename{
-    /*border: 1px solid red;*/
-    font-size: 100px;
-    width: 550px;
+#gamename {
+  /*border: 1px solid red;*/
+  font-size: 100px;
+  width: 550px;
 }
-.babydiv{
-    /*border: 4px solid black;*/
-    margin-left: 30px;
-    width: 600px;
+.babydiv {
+  /*border: 4px solid black;*/
+  margin-left: 30px;
+  width: 600px;
 }
-.uncomfortableli{
-    float: left;
+.uncomfortableli {
+  float: left;
 }
-ul{
-    list-style-position: outside;
+ul {
+  list-style-position: outside;
 }
-li{
-    color: black;
-    font-size: 25px;
+li {
+  color: black;
+  font-size: 25px;
 }
-.startbutton{
-    border-radius: 5.6px;
-    height: 100px;
-    width: 180px;
-    border: 1px solid white;
-    background-color: white;
+
+.buttonspace {
+  text-align: center;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  background-color: #774c98;
+  color: white;
+  height: 80px;
+  padding: 10px;
+  border-radius: 10px;
 }
-.startbutton:hover{
-    border-radius: 5.6px;
-    height: 112.5px;
-    width: 195px;
-    border: 1px solid #B3C561;
-    background-color: #95AE23;
-    font-size: 43px;
-}
-.buttonspace{
-    text-align: center;
-    font-size: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
+
+.buttonspace:hover {
+  cursor: pointer;
+  background-color: #95ae23;
 }

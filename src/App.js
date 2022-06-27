@@ -27,16 +27,46 @@ const App = () => {
   const [healthStrike, setHealthStrike] = useState(0);
   const [workStrike, setWorkStrike] = useState(0);
   const [socialStrike, setSocialStrike] = useState(0);
+  const [playAlarm, setPlayAlarm] = useState(false);
+  const [strikeTitle, setStrikeTitle] = useState("Work Strike");
+  const [message1, setMessage1] = useState(
+    "Your health is the most important and not having good health hinders your ability to work"
+  );
+  const [message2, setMessage2] = useState(
+    " A balanced diet is key to helping you and your family healthy. Foods that are high in preservatives may cost less, but taking it over anextended period of time could lead to malnutrition in your children and health issues in the future that could cost you even more!"
+  );
+  const [message3, setMessage3] = useState("");
+  const [warning, setWarning] = useState(
+    "Getting 3 Family Strikes will earn you a visit from a concerned social worker as you are deemed as not being able to care for your children in the best possible way. The stress from being seen as an incompetent mother and worry about your children being taken from you earns you a Health Strike as well."
+  );
 
   return (
     <AppContext.Provider
       value={{
         day,
+        setDay,
         totalBalance,
+        setTotalBalance,
         familyStrike,
+        setFamilyStrike,
         healthStrike,
+        setHealthStrike,
         workStrike,
+        setWorkStrike,
         socialStrike,
+        setSocialStrike,
+        playAlarm,
+        setPlayAlarm,
+        strikeTitle,
+        setStrikeTitle,
+        message1,
+        setMessage1,
+        message2,
+        setMessage2,
+        message3,
+        setMessage3,
+        warning,
+        setWarning,
       }}
     >
       <BrowserRouter>

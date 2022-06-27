@@ -9,18 +9,12 @@
 
 .solid {
   border: 2px solid white;
-  height: 620px;
-  border-radius: 50%;
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  width: 620px;
+  height: 725px;
+  border-radius: 725px;
+  width: 725px;
   background: rgba(255, 255, 255, 0.3);
-
-  margin-right: 390px;
-  margin-left: 390px;
-  text-align: center;
-  padding-right: 40px;
-  padding-left: 40px;
+  display: flex;
+  justify-content: center;
 }
 
 .title {
@@ -40,19 +34,12 @@
   margin-bottom: 20px;
 }
 
-.second {
-  margin-bottom: 30px;
-  font-size: 18px;
-}
-
-.last {
+.message {
   margin-bottom: 30px;
   font-size: 18px;
 }
 
 .warning {
-  margin-right: 45px;
-  margin-left: 45px;
   font-size: 22px;
   text-shadow: 0.5px 1px white;
   text-decoration: underline;
@@ -77,4 +64,10 @@
   border: 1px solid gray;
   background: rgba(255, 255, 255, 0.8);
   cursor: pointer;
+}
+
+.box {
+  text-align: center;
+  width: 600px;
+  height: 700px;
 }

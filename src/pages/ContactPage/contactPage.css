@@ -1,0 +1,136 @@
+.back {
+  display: flex;
+  height: 100vh;
+}
+
+.left {
+  width: 50%;
+}
+
+.thx {
+  color: #eb5c70;
+  font-size: 130px;
+  margin-left: 80px;
+  margin-top: 30px;
+}
+
+.facepic {
+  width: 110px;
+  height: 75px;
+  margin-left: 65px;
+}
+
+.link {
+  width: 75px;
+  height: 75px;
+  margin-top: 10px;
+  margin-left: 82px;
+}
+
+.logopic {
+  width: 480px;
+  height: 550px;
+  background-image: url("https://daughtersoftomorrow.org/");
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+}
+
+.site {
+  font-size: 30px;
+}
+
+a:visited {
+  background-color: cyan;
+}
+
+a:hover {
+  background-color: hotpink;
+}
+
+a:active {
+  background-color: lightgreen;
+}
+
+.insta {
+  display: flex;
+  align-items: center;
+  margin-left: 95px;
+  margin-bottom: 21px;
+  margin-top: 40px;
+}
+
+.instapic {
+  width: 47px;
+  height: 47px;
+}
+
+.line {
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+.line1 {
+  font-size: 25px;
+}
+
+.line2 {
+  font-size: 25px;
+  margin-left: 5px;
+}
+
+.face {
+  display: flex;
+  align-items: center;
+}
+
+.linkclass {
+  display: flex;
+  align-items: center;
+}
+
+.right {
+  display: flex;
+  margin-left: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact {
+  font-size: 20px;
+  color: #484747;
+  margin-top: 45px;
+  margin-left: 90px;
+}
+
+.fline {
+  display: flex;
+  justify-content: center;
+}
+
+.sline {
+  display: flex;
+  justify-content: center;
+}
+
+.tline {
+  display: flex;
+  justify-content: center;
+}
+
+.fourthline {
+  display: flex;
+  justify-content: center;
+}
+
+.fifthline {
+  display: flex;
+  justify-content: center;
+}
+
+.sixthline {
+  display: flex;
+  justify-content: center;
+}

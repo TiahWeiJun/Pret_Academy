@@ -1,84 +1,86 @@
-.centraldiv{
-    display: flex;
-    background-color: #F08A98;
-    flex-direction: column;
+/* .centraldiv {
+  display: flex;
+  background-color: #f08a98;
+  flex-direction: column;
 }
-.question{
-    font-size: 50px;
+.question {
+  font-size: 50px;
 }
-.ans{
-    display: flex;
-    margin-top: -30%;
-    flex-direction: row;
+.ans {
+  display: flex;
+  margin-top: -30%;
+  flex-direction: row;
 }
-.greenans-t{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    height: 40vh;
-    width: 37vw;
-    font-size: 280%;
-}
-
-#situation{
-    text-decoration: underline;
+.greenans-t {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 40vh;
+  width: 37vw;
+  font-size: 280%;
 }
 
-.greenans-t:hover{
-    background-color: #B3C561;
+#situation {
+  text-decoration: underline;
 }
 
-.pinkans-t{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    height: 40vh;
-    width: 37vw;
-    font-size: 280%;
-}
-.pinkans-t:hover{
-    background-color: #F6B9C1;
-}
-.pc{
-    font-size: 40px;
+.greenans-t:hover {
+  background-color: #b3c561;
+  cursor: pointer;
 }
 
-.cost{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100px;
-    width: 180px;
-    background-color: #FFEFB2;
-    border-radius: 100%;
-    margin-left: 20px;
+.pinkans-t {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 40vh;
+  width: 37vw;
+  font-size: 280%;
 }
-.healthy{
-    height: 300px;
-    width: 250px;
+.pinkans-t:hover {
+  background-color: #f6b9c1;
+  cursor: pointer;
 }
-.unhealthy{
-    height: 300px;
-    width: 250px;
+.pc {
+  font-size: 40px;
 }
-.gc{
-    font-size: 40px;
+
+.cost {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 180px;
+  background-color: #ffefb2;
+  border-radius: 100%;
 }
-#gd{
-    display: flex;
-    flex-direction: row;
-    background-color:white;
-    border: 4px solid #95AE23;
-    color: #95AE23;
-    font-size: 20px;
+
+.healthy {
+  height: 300px;
+  width: 250px;
 }
-#pd{
-    display: flex;
-    flex-direction: row;
-    background-color:white;
-    border: 4px solid #EB5C70;
-    font-size: 15px;
-    color:#EB5C70;
+.unhealthy {
+  height: 300px;
+  width: 250px;
 }
+.gc {
+  font-size: 40px;
+}
+#gd {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border: 4px solid #95ae23;
+  color: #95ae23;
+  font-size: 20px;
+}
+#pd {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  border: 4px solid #eb5c70;
+  font-size: 15px;
+  color: #eb5c70;
+} */

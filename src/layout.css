@@ -1,51 +1,131 @@
 .layoutContainer {
-   display: flex;
+  display: flex;
 
-   height: 100vh;
-   justify-content: space-between;
+  height: 100vh;
+  justify-content: space-between;
   background-color: #f08a98;
 }
 
 .leftBar {
   font-size: 18px;
-  color: whitesmoke;
-  width: 13%;
-  border: 1px solid black;
-  display:flex;
+  width: 15%;
+  /* border: 1px solid black; */
+  display: flex;
   align-items: center;
   flex-direction: column;
+  padding-top: 10px;
+  background-color: #f6b9c1;
 }
 
-.dollar{
-  color:#95AE23;
+.dollar {
+  color: #95ae23;
+  margin-right: 10px;
 }
-.size{
-  font-size: 63px;
+.size {
+  text-align: left;
+  margin-bottom: 30px;
 }
-.bottom{
+.bottom {
   padding-top: 30px;
 }
 
-.spacing{
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-.down{
-  padding:50px
+.down {
+  padding: 50px;
 }
 .rightBar {
   color: whitesmoke;
   font-size: 20px;
-  width: 13%;
-  border: 1px solid black;
-  display:flex;
-  align-items: center;
+  width: 20%;
+  /* border: 1px solid black; */
+  display: flex;
+
+  padding-top: 50px;
+}
+
+.mainBar {
+  width: 80%;
+  padding: 5px;
+  display: flex;
   flex-direction: column;
 }
 
-
-.mainBar {
-  width: 100%;
+.dayRow {
+  display: flex;
+  justify-content: center;
+  height: 100px;
 }
 
+.child {
+  padding: 10px;
+}
 
+.timer {
+  border: 2px solid black;
+  height: 150px;
+  width: 150px;
+  border-radius: 150px;
+  border: 8px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timerNum {
+  font-size: 50px;
+  color: red;
+  font-weight: bold;
+}
+
+.timerAnimate {
+  border: 2px solid black;
+  height: 150px;
+  width: 150px;
+  border-radius: 150px;
+  border: 8px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: animate 0.8s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.balance {
+  font-size: 20px;
+  color: white;
+}
+
+.amount {
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 3px;
+}
+
+.line {
+  border: 1px solid white;
+  width: 120px;
+}
+
+.strikeDiv {
+  text-align: center;
+}
+
+.strikeContainer {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
