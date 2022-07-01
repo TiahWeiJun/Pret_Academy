@@ -52,12 +52,16 @@ const Day6Page = () => {
         </div>
         <div className="centerdiv">
           <div className="greenans-one" onClick={greennextPage}>
-            <div className="cost">-100$</div>
-            <p id="g">Buy it for him</p>
+            <button type="button" className="greenbtn">
+              <p className="greenchoice">-$100</p>
+              <p className="word">Buy it for him</p>
+            </button>
           </div>
           <div className="pinkans-one" onClick={pinknextPage}>
-            <div className="cost">-0$</div>
-            <p id="p">Say No</p>
+            <button type="button" className="redbtn">
+              <p className="redchoice">-$0</p>
+              <p className="word">Say No</p>
+            </button>
           </div>
         </div>
       </div>

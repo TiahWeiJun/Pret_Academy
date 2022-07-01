@@ -42,16 +42,12 @@
   font-size: 30px;
 }
 
-a:visited {
-  background-color: cyan;
+a {
+  color: #f08a98;
 }
 
 a:hover {
-  background-color: hotpink;
-}
-
-a:active {
-  background-color: lightgreen;
+  color: #95ae23;
 }
 
 .insta {

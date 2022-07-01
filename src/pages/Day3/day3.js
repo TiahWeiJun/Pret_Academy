@@ -57,34 +57,38 @@ const Day3Page = (props) => {
         </div>
         <div className="centerdiv">
           <div className="greenans-one" onClick={greennextPage}>
-            <div className="cost">-350$</div>
-            <div id="g">
-              <div>
-                <p className="gc">Healthy but Expensive option </p>
+            <button type="button" className="greenbtn">
+              <p className="greenchoice">-$10</p>
+              <div id="g">
+                <div>
+                  <p className="gc">Healthy but Expensive option </p>
+                </div>
+                <img
+                  src={healthyFood}
+                  className="healthy"
+                  alt="healthyfood"
+                  height="300px"
+                  width="400px"
+                ></img>
               </div>
-              <img
-                src={healthyFood}
-                className="healthy"
-                alt="healthyfood"
-                height="300px"
-                width="400px"
-              ></img>
-            </div>
+            </button>
           </div>
           <div className="pinkans-one" onClick={pinknextPage}>
-            <div className="cost">-2$</div>
-            <div id="p">
-              <div>
-                <p className="pc">Cheap but Unhealthy option </p>
+            <button type="button" className="redbtn">
+              <p className="redchoice">-$2</p>
+              <div id="p">
+                <div>
+                  <p className="pc">Cheap but Unhealthy option </p>
+                </div>
+                <img
+                  src={unhealthy}
+                  className="unhealthy"
+                  alt="unhealthyfood"
+                  height="300px"
+                  width="400px"
+                ></img>
               </div>
-              <img
-                src={unhealthy}
-                className="unhealthy"
-                alt="unhealthyfood"
-                height="300px"
-                width="400px"
-              ></img>
-            </div>
+            </button>
           </div>
         </div>
       </div>

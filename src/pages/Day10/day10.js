@@ -52,12 +52,16 @@ const Day10Page = () => {
         </div>
         <div className="centerdiv">
           <div className="greenans-one" onClick={greennextPage}>
-            <div className="cost">-204$</div>
-            <p id="g">Give your son the money to go</p>
+            <button type="button" className="greenbtn">
+              <p className="greenchoice">-$24</p>
+              <p className="word">Give your son the money to go</p>
+            </button>
           </div>
           <div className="pinkans-one" onClick={pinknextPage}>
-            <div className="cost">-0$</div>
-            <p id="p">Tell him no</p>
+            <button type="button" className="redbtn">
+              <p className="redchoice">-$0</p>
+              <p className="word">Tell him no</p>
+            </button>
           </div>
         </div>
       </div>

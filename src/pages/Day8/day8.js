@@ -52,12 +52,16 @@ const Day8Page = () => {
         </div>
         <div className="centerdiv">
           <div className="greenans-one" onClick={greennextPage}>
-            <div className="cost">-80$</div>
-            <p id="g">Get the promotion</p>
+            <button type="button" className="greenbtn">
+              <p className="greenchoice">-$80</p>
+              <p className="word">Get the promotion</p>
+            </button>
           </div>
           <div className="pinkans-one" onClick={pinknextPage}>
-            <div className="cost">-20$</div>
-            <p id="p">Just top up what you need</p>
+            <button type="button" className="redbtn">
+              <p className="redchoice">-$20</p>
+              <p className="word">Just top up what you need</p>
+            </button>
           </div>
         </div>
       </div>

@@ -46,20 +46,28 @@ const Day5Page = (props) => {
     <Layout>
       <div className="day1">
         <div className="question">
-          <p id="situation">Situation: </p> our daughter still has a fever and
+          <p id="situation">Situation: </p> Our daughter still has a fever and
           has to stay home for the day. Your husband is unable to watch her as
           he has a doctor's appointment and you need to work…
         </div>
+
         <div className="centerdiv">
           <div className="greenans-one" onClick={greennextPage}>
-            <div className="cost">-50$</div>
-            <p id="g">Get a babysitter to take care of your child</p>
+            <button type="button" className="greenbtn">
+              <p className="greenchoice">-$50</p>
+              <p className="word">
+                Get a babysitter to take care of your child
+              </p>
+            </button>
           </div>
           <div className="pinkans-one" onClick={pinknextPage}>
-            <div className="cost">-25$</div>
-            <p id="p">
-              Ask your boss to give you no-pay leave to take care of your child
-            </p>
+            <button type="button" className="redbtn">
+              <p className="redchoice">-$25</p>
+              <p className="word">
+                Ask your boss to give you no-pay leave to take care of your
+                child
+              </p>
+            </button>
           </div>
         </div>
       </div>

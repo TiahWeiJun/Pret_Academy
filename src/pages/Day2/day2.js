@@ -54,14 +54,18 @@ const Day2Page = () => {
         </div>
         <div className="centerdiv">
           <div className="greenans-one" onClick={greennextPage}>
-            <div className="cost">-200$</div>
-            <p id="g">
-              Pay for rent ($120) and utilities ($50) + Late Fees ($30)
-            </p>
+            <button type="button" className="greenbtn">
+              <p className="greenchoice">-$200</p>
+              <p className="word">
+                Pay for rent ($120) and utilities ($50) + Late Fees ($30)
+              </p>
+            </button>
           </div>
           <div className="pinkans-one" onClick={pinknextPage}>
-            <div className="cost">-0$</div>
-            <p id="p">Don’t Pay</p>
+            <button type="button" className="redbtn">
+              <p className="redchoice">-$0</p>
+              <p className="word">Don’t Pay</p>
+            </button>
           </div>
         </div>
       </div>

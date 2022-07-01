@@ -51,12 +51,18 @@ const Day7Page = () => {
         </div>
         <div className="centerdiv">
           <div className="greenans-one" onClick={greennextPage}>
-            <div className="cost">-30$</div>
-            <p id="g">Pay $30</p>
+            <button type="button" className="greenbtn">
+              <p className="greenchoice">-$30</p>
+              <p className="word">Pay $30</p>
+            </button>
           </div>
           <div className="pinkans-one" onClick={pinknextPage}>
-            <div className="cost">-0$</div>
-            <p id="p">Don’t pay and keep your child in studentcare that day</p>
+            <button type="button" className="redbtn">
+              <p className="redchoice">-$0</p>
+              <p className="word">
+                Don’t pay and keep your child in studentcare that day
+              </p>
+            </button>
           </div>
         </div>
       </div>

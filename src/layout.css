@@ -22,8 +22,10 @@
   margin-right: 10px;
 }
 .size {
-  text-align: left;
   margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .bottom {
   padding-top: 30px;
@@ -114,11 +116,6 @@
   letter-spacing: 3px;
 }
 
-.line {
-  border: 1px solid white;
-  width: 120px;
-}
-
 .strikeDiv {
   text-align: center;
 }
@@ -128,4 +125,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+.under {
+  border: 1px solid white;
 }

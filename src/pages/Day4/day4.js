@@ -52,12 +52,16 @@ const Day4Page = (props) => {
         </div>
         <div className="centerdiv">
           <div className="greenans-one" onClick={greennextPage}>
-            <div className="cost">-20$</div>
-            <p id="g">Ask them to go to the doctor</p>
+            <button type="button" className="greenbtn">
+              <p className="greenchoice">-$20</p>
+              <p className="word">Ask them to go to the doctor</p>
+            </button>
           </div>
           <div className="pinkans-one" onClick={pinknextPage}>
-            <div className="cost">-0$</div>
-            <p id="p">Ask them to stay at home</p>
+            <button type="button" className="redbtn">
+              <p className="redchoice">-$0</p>
+              <p className="word">Ask them to stay at home</p>
+            </button>
           </div>
         </div>
       </div>

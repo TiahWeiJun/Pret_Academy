@@ -47,7 +47,7 @@ const Layout = ({ children }) => {
       <div className="leftBar">
         <div className="size">
           <div className="balance">BALANCE</div>
-          <div className="line"></div>
+          <hr className="under" />
           <p className="amount">
             <span className="dollar">$</span>
             {totalBalance}
