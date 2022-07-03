@@ -9,13 +9,12 @@ const GameOverPage = () => {
 
   return (
     <div className="whole-screen">
-      <div className="gameover-center">
-        <h1 className="title"> Game over</h1>
-        <p className="paragraph">
-          You have run out of money! You should try again
-        </p>
-        <div className="button" onClick={backToHome}>
-          Try again
+      <div className="content">
+        <p className="game-over">GAME OVER</p>
+        <p className="msg">You have used up all your money before 10 days!</p>
+
+        <div className="btn" onClick={backToHome}>
+          Try Again!
         </div>
       </div>
     </div>

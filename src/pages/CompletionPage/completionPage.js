@@ -9,7 +9,7 @@ const CompletionPage = () => {
 
   const Navigate = useNavigate();
   const nextPage = () => {
-    Navigate("/contact");
+    Navigate("/contact", { replace: true });
   };
 
   return (
