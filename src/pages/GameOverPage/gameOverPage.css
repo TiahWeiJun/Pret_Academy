@@ -1,5 +1,5 @@
 .whole-screen {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #f08a98;
   display: flex;
   justify-content: center;
