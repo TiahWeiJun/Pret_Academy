@@ -34,16 +34,54 @@ const Day10Page = () => {
 
   const Navigate = useNavigate();
   const greennextPage = () => {
-    Navigate("/consequence");
-    // -10$
+    const newBalance = totalBalance - 24;
+    if (newBalance <= 0) {
+      Navigate("/gameOver");
+      setTotalBalance(newBalance);
+      return;
+    }
+
+    setTotalBalance(newBalance);
+
+    setStrikeTitle("");
+    setMessage1(
+      "Your son comes home and shares with you all the fun details from the day!"
+    );
+    setMessage2("");
+    setMessage3("");
+    setWarning("");
+
+    setPlayAlarm(false);
+    Navigate("/consequence", { replace: true });
   };
   const pinknextPage = () => {
-    Navigate("/consequence");
-    // -2$
+    setStrikeTitle("Family Strike");
+    setMessage1(
+      "Your son comes home and shares with you all the fun details from the day!"
+    );
+    setMessage2("");
+    setMessage3("");
+    setWarning("");
+
+    const newFamilyStrike = familyStrike + 1;
+    setFamilyStrike(newFamilyStrike);
+    if (newFamilyStrike === 3) {
+      setWarning(
+        "You have 3 family strikes. This will earn you a visit from a concerned social worker as you are deemed as not being able to care for your children in the best possible way. The stress from being seen as an incompetent mother and worry about your children being taken from you earns you a Health Strike as well. "
+      );
+      setHealthStrike((strike) => strike + 1);
+    } else if (newFamilyStrike === 5) {
+      setWarning(
+        "You have 5 family strikes and your children will be taken away "
+      );
+    }
+
+    setPlayAlarm(false);
+    Navigate("/consequence", { replace: true });
   };
 
   return (
-    <Layout>
+    <Layout leftChoice={greennextPage} rightChoice={pinknextPage}>
       <div className="day1">
         <div className="question">
           <p id="situation">Situation: </p> Some of son's friends are going to

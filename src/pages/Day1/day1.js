@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./day1.css";
 import { useNavigate } from "react-router-dom";
 import Layout from "../../layout";
@@ -33,17 +33,58 @@ const Day1Page = () => {
   } = useContext(AppContext);
 
   const Navigate = useNavigate();
+
   const greennextPage = () => {
-    Navigate("/consequence");
-    // -10$
+    const newBalance = totalBalance - 10;
+    if (newBalance <= 0) {
+      Navigate("/gameOver");
+      setTotalBalance(newBalance);
+      return;
+    }
+
+    setTotalBalance(newBalance);
+    setStrikeTitle("");
+    setMessage1("Congrats on starting your new job!");
+    setMessage2("And great job in getting to work on time!");
+    setMessage3("");
+    setWarning("");
+
+    setPlayAlarm(false);
+
+    Navigate("/consequence", { replace: true });
   };
   const pinknextPage = () => {
-    Navigate("/consequence");
-    // -2$
+    const newBalance = totalBalance - 10;
+    if (newBalance <= 0) {
+      Navigate("/gameOver");
+      setTotalBalance(newBalance);
+      return;
+    }
+
+    setTotalBalance(newBalance);
+
+    setStrikeTitle("Work Strike");
+    setMessage1(
+      "Being late on your first day at work doesn't leave a good impression on your new boss. "
+    );
+    setMessage2("");
+    setMessage3("");
+    setWarning("");
+
+    const newWorkStrike = workStrike + 1;
+    setWorkStrike(newWorkStrike);
+    if (newWorkStrike === 3) {
+      setWarning(
+        "Accumulating 3 Work Strikes could result in you losing your job!"
+      );
+    }
+
+    setPlayAlarm(false);
+    Navigate("/consequence", { replace: true });
   };
 
   return (
-    <Layout>
+    <Layout leftChoice={greennextPage} rightChoice={pinknextPage}>
       <div className="day1">
         <div className="question">
           <p id="situation">Situation: </p> It’s your first day of work and your

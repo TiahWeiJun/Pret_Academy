@@ -34,16 +34,39 @@ const Day6Page = () => {
 
   const Navigate = useNavigate();
   const greennextPage = () => {
-    Navigate("/consequence");
-    // -100$
+    const newBalance = totalBalance - 100;
+    if (newBalance <= 0) {
+      Navigate("/gameOver");
+      setTotalBalance(newBalance);
+      return;
+    }
+
+    setTotalBalance(newBalance);
+
+    setStrikeTitle("");
+    setMessage1("Being able to take care of your family is blessing!");
+    setMessage2("");
+    setMessage3("");
+    setWarning("");
+
+    setPlayAlarm(false);
+    Navigate("/consequence", { replace: true });
   };
   const pinknextPage = () => {
-    Navigate("/consequence");
-    // -0$
+    setStrikeTitle("");
+    setMessage1(
+      "Seeing your husband's health fail takes a toll on your own well-being as you feel guilty for not being able to take care of him."
+    );
+    setMessage2("");
+    setMessage3("");
+    setWarning("");
+
+    setPlayAlarm(false);
+    Navigate("/consequence", { replace: true });
   };
 
   return (
-    <Layout>
+    <Layout leftChoice={greennextPage} rightChoice={pinknextPage}>
       <div className="day1">
         <div className="question">
           <p id="situation">Situation: </p> Your husband has diabetes and

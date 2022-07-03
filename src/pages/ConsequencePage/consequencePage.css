@@ -9,9 +9,9 @@
 
 .solid {
   border: 2px solid white;
-  height: 725px;
-  border-radius: 725px;
-  width: 725px;
+  height: 650px;
+  border-radius: 650px;
+  width: 650px;
   background: rgba(255, 255, 255, 0.3);
   display: flex;
   justify-content: center;
@@ -27,7 +27,8 @@
 }
 
 .strike {
-  color: black;
+  color: red;
+  font-weight: bold;
   font-size: 30px;
   line-height: 10px;
   margin-top: 30px;
@@ -68,6 +69,6 @@
 
 .box {
   text-align: center;
-  width: 600px;
-  height: 700px;
+  width: 530px;
+  height: 600px;
 }

@@ -34,16 +34,53 @@ const Day7Page = () => {
 
   const Navigate = useNavigate();
   const greennextPage = () => {
-    Navigate("/consequence");
-    // -30$
+    const newBalance = totalBalance - 30;
+    if (newBalance <= 0) {
+      Navigate("/gameOver");
+      setTotalBalance(newBalance);
+      return;
+    }
+
+    setTotalBalance(newBalance);
+
+    setStrikeTitle("");
+    setMessage1(
+      "Your daughter comes home from USS and tells you about the wonderful time she had!"
+    );
+    setMessage2("");
+    setMessage3("");
+    setWarning("");
+
+    setPlayAlarm(false);
+    Navigate("/consequence", { replace: true });
   };
   const pinknextPage = () => {
-    Navigate("/consequence");
-    // -0$
+    setStrikeTitle("Family Strike");
+    setMessage1("Mom guilt is REAL!");
+    setMessage2(
+      "You daughter is dissapointed and feels left out of feeling 'normal' and being with her friends. She starts withdrawing at home. "
+    );
+    setMessage3("");
+    setWarning("");
+
+    const newFamilyStrike = familyStrike + 1;
+    setFamilyStrike(newFamilyStrike);
+    if (newFamilyStrike === 1) {
+      setWarning(
+        "You have 3 family strikes. This will earn you a visit from a concerned social worker as you are deemed as not being able to care for your children in the best possible way. The stress from being seen as an incompetent mother and worry about your children being taken from you earns you a Health Strike as well. "
+      );
+      setHealthStrike((strike) => strike + 1);
+    } else if (newFamilyStrike === 5) {
+      setWarning(
+        "You have 5 family strikes and your children will be taken away "
+      );
+    }
+    setPlayAlarm(false);
+    Navigate("/consequence", { replace: true });
   };
 
   return (
-    <Layout>
+    <Layout leftChoice={greennextPage} rightChoice={pinknextPage}>
       <div className="day1">
         <div className="question">
           <p id="situation">Situation: </p> Your daughter's school is organising

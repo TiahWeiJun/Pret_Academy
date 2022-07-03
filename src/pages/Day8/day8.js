@@ -34,16 +34,48 @@ const Day8Page = () => {
 
   const Navigate = useNavigate();
   const greennextPage = () => {
-    Navigate("/consequence");
-    // -80$
+    const newBalance = totalBalance - 80;
+    if (newBalance <= 0) {
+      Navigate("/gameOver");
+      setTotalBalance(newBalance);
+      return;
+    }
+
+    setTotalBalance(newBalance);
+
+    setStrikeTitle("");
+    setMessage1("You got a great deal!");
+    setMessage2("");
+    setMessage3("");
+    setWarning("");
+
+    setPlayAlarm(false);
+    Navigate("/consequence", { replace: true });
   };
   const pinknextPage = () => {
-    Navigate("/consequence");
-    // -20$
+    const newBalance = totalBalance - 20;
+    if (newBalance <= 0) {
+      Navigate("/gameOver");
+      setTotalBalance(newBalance);
+      return;
+    }
+
+    setTotalBalance(newBalance);
+
+    setStrikeTitle("");
+    setMessage1(
+      'It is actually more expensive to be "poor" as you are not able to take advantage of these promotions such as this one due to budget constraints'
+    );
+    setMessage2("");
+    setMessage3("");
+    setWarning("");
+
+    setPlayAlarm(false);
+    Navigate("/consequence", { replace: true });
   };
 
   return (
-    <Layout>
+    <Layout leftChoice={greennextPage} rightChoice={pinknextPage}>
       <div className="day1">
         <div className="question">
           <p id="situation">Situation: </p> Your EZ-link is low on value and

@@ -2,9 +2,15 @@ import React, { useContext } from "react";
 import "./completionPage.css";
 import image from "../../ImageList/Image101.jpeg";
 import { AppContext } from "../../App";
+import { useNavigate } from "react-router-dom";
 
 const CompletionPage = () => {
   const { totalBalance } = useContext(AppContext);
+
+  const Navigate = useNavigate();
+  const nextPage = () => {
+    Navigate("/contact");
+  };
 
   return (
     <div className="mainDiv">
@@ -19,7 +25,9 @@ const CompletionPage = () => {
         The choices u make in this game are based on real life experiences of
         women within the DOT community!
       </div>
-      <div className="nextButton">Next</div>
+      <div className="nextButton" onClick={nextPage}>
+        Next
+      </div>
     </div>
   );
 };

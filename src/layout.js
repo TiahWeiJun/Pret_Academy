@@ -3,10 +3,9 @@ import "./layout.css";
 import { AppContext } from "./App";
 import { useTimer } from "use-timer";
 import ReactAudioPlayer from "react-audio-player";
-import useSound from "use-sound";
 import alarm from "./sounds/alarm.mp3";
 
-const Layout = ({ children }) => {
+const Layout = ({ children, leftChoice, rightChoice }) => {
   const {
     day,
     totalBalance,
@@ -33,6 +32,11 @@ const Layout = ({ children }) => {
     onTimeOver: () => {
       setTimerClass("timer");
       setPlayAlarm(false);
+      if (Math.floor(Math.random() * 2) === 1) {
+        leftChoice();
+      } else {
+        rightChoice();
+      }
     },
   });
 

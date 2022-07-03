@@ -34,16 +34,58 @@ const Day5Page = (props) => {
 
   const Navigate = useNavigate();
   const greennextPage = () => {
-    Navigate("/consequence");
-    // -50$
+    const newBalance = totalBalance - 50;
+    if (newBalance <= 0) {
+      Navigate("/gameOver");
+      setTotalBalance(newBalance);
+      return;
+    }
+
+    setTotalBalance(newBalance);
+
+    setStrikeTitle("");
+    setMessage1(
+      "Luckily you were able to pay a neighbour to help you watch your daughter while you go to work."
+    );
+    setMessage2("");
+    setMessage3("");
+    setWarning("");
+
+    setPlayAlarm(false);
+    Navigate("/consequence", { replace: true });
   };
   const pinknextPage = () => {
-    Navigate("/consequence");
-    // -25$
+    const newBalance = totalBalance - 25;
+    if (newBalance <= 0) {
+      Navigate("/gameOver");
+      setTotalBalance(newBalance);
+      return;
+    }
+
+    setTotalBalance(newBalance);
+
+    setStrikeTitle("Work Strike");
+    setMessage1(
+      "You are still on probation and do not have child-care/child sick leave. Taking no-pay leave when you have only just started work. Your boss isn't too happy."
+    );
+    setMessage2("Money will be deducted from your next paycheck");
+    setMessage3("");
+    setWarning("");
+
+    const newWorkStrike = workStrike + 1;
+    setWorkStrike(newWorkStrike);
+    if (newWorkStrike === 3) {
+      setWarning(
+        "Accumulating 3 Work Strikes could result in you losing your job!"
+      );
+    }
+
+    setPlayAlarm(false);
+    Navigate("/consequence", { replace: true });
   };
 
   return (
-    <Layout>
+    <Layout leftChoice={greennextPage} rightChoice={pinknextPage}>
       <div className="day1">
         <div className="question">
           <p id="situation">Situation: </p> Our daughter still has a fever and

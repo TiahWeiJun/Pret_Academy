@@ -1,8 +1,51 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import "./homepage.css";
 import { useNavigate } from "react-router-dom";
+import { AppContext } from "../../App";
 
 const HomePage = () => {
+  const {
+    day,
+    setDay,
+    totalBalance,
+    setTotalBalance,
+    familyStrike,
+    setFamilyStrike,
+    healthStrike,
+    setHealthStrike,
+    workStrike,
+    setWorkStrike,
+    socialStrike,
+    setSocialStrike,
+    playAlarm,
+    setPlayAlarm,
+    strikeTitle,
+    setStrikeTitle,
+    message1,
+    setMessage1,
+    message2,
+    setMessage2,
+    message3,
+    setMessage3,
+    warning,
+    setWarning,
+  } = useContext(AppContext);
+
+  useEffect(() => {
+    setDay(1);
+    setTotalBalance(600);
+    setFamilyStrike(0);
+    setWorkStrike(0);
+    setHealthStrike(0);
+    setSocialStrike(0);
+    setPlayAlarm(false);
+    setStrikeTitle("");
+    setMessage1("");
+    setMessage2("");
+    setMessage3("");
+    setWarning("");
+  }, []);
+
   const Navigate = useNavigate();
   const nextPage = () => {
     Navigate("/1");

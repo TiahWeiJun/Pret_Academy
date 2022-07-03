@@ -34,37 +34,77 @@ const Day2Page = () => {
 
   const Navigate = useNavigate();
   const greennextPage = () => {
-    Navigate("/consequence");
-    // -200$  Good on you for keeping up with your payments.
+    const newBalance = totalBalance - 10;
+    if (newBalance <= 0) {
+      Navigate("/gameOver");
+      setTotalBalance(newBalance);
+      return;
+    }
+
+    setTotalBalance(newBalance);
+
+    setStrikeTitle("");
+    setMessage1(
+      "Your new colleagues are nice and you got to know them a little better over lunch!"
+    );
+    setMessage2("");
+    setMessage3("");
+    setWarning("");
+
+    setPlayAlarm(false);
+    Navigate("/consequence", { replace: true });
   };
   const pinknextPage = () => {
-    Navigate("/consequence");
-    // // -0$  "Your utilities are CUT! Your water supply is reduced to trickles!
-    //
-    // HDB officers have visited you and give you a ""PINK"" slip. You are at risk of losing your home if you miss another rent payment.
+    const newBalance = totalBalance - 5;
+    if (newBalance <= 0) {
+      Navigate("/gameOver");
+      setTotalBalance(newBalance);
+      return;
+    }
 
-    // You need to stand for the rest of the game until you’ve paid your rent."
+    setTotalBalance(newBalance);
+
+    setStrikeTitle("Social Strike");
+    setMessage1(
+      "Human beings are social creatures and we need connection and social support."
+    );
+    setMessage2("");
+    setMessage3("");
+    setWarning("");
+
+    const newSocialStrike = socialStrike + 1;
+    setSocialStrike(newSocialStrike);
+    if (newSocialStrike === 3) {
+      setWarning(
+        "Accumulating 3 Social Strikes will earn you a Health Strike!"
+      );
+      setHealthStrike((strike) => strike + 1);
+    }
+
+    setPlayAlarm(false);
+    Navigate("/consequence", { replace: true });
   };
 
   return (
-    <Layout>
+    <Layout leftChoice={greennextPage} rightChoice={pinknextPage}>
       <div className="day1">
         <div className="question">
-          <p id="situation">Situation: </p> Bills are due today{" "}
+          <p id="situation">Situation: </p> Your new colleagues seems nice and
+          are asking you out for lunch to get to know you better.
         </div>
         <div className="centerdiv">
           <div className="greenans-one" onClick={greennextPage}>
             <button type="button" className="greenbtn">
-              <p className="greenchoice">-$200</p>
-              <p className="word">
-                Pay for rent ($120) and utilities ($50) + Late Fees ($30)
-              </p>
+              <p className="greenchoice">-$10</p>
+              <p className="word">Join them for lunch at a cafe nearby</p>
             </button>
           </div>
           <div className="pinkans-one" onClick={pinknextPage}>
             <button type="button" className="redbtn">
-              <p className="redchoice">-$0</p>
-              <p className="word">Don’t Pay</p>
+              <p className="redchoice">-$5</p>
+              <p className="word">
+                Politely decline and get your own lunch from the foodcourt
+              </p>
             </button>
           </div>
         </div>

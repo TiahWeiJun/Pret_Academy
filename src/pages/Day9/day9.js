@@ -34,16 +34,50 @@ const Day9Page = () => {
 
   const Navigate = useNavigate();
   const greennextPage = () => {
-    Navigate("/consequence");
-    // -10$
+    const newBalance = totalBalance - 20;
+    if (newBalance <= 0) {
+      Navigate("/gameOver");
+      setTotalBalance(newBalance);
+      return;
+    }
+
+    setTotalBalance(newBalance);
+
+    setStrikeTitle("");
+    setMessage1(
+      "Great you did not miss out an important text from your boss updating you on some work matters."
+    );
+    setMessage2("");
+    setMessage3("");
+    setWarning("");
+
+    setPlayAlarm(false);
+    Navigate("/consequence", { replace: true });
   };
   const pinknextPage = () => {
-    Navigate("/consequence");
-    // -2$
+    setStrikeTitle("Social Strike");
+    setMessage1(
+      "Human beings are social creatures and we need connection and social support."
+    );
+    setMessage2("");
+    setMessage3("");
+    setWarning("");
+
+    const newSocialStrike = socialStrike + 1;
+    setSocialStrike(newSocialStrike);
+    if (newSocialStrike === 3) {
+      setWarning(
+        "Accumulating 3 Social Strikes will earn you a Health Strike!"
+      );
+      setHealthStrike((strike) => strike + 1);
+    }
+
+    setPlayAlarm(false);
+    Navigate("/consequence", { replace: true });
   };
 
   return (
-    <Layout>
+    <Layout leftChoice={greennextPage} rightChoice={pinknextPage}>
       <div className="day1">
         <div className="question">
           <p id="situation">Situation: </p> Your prepaid card is out of credits
