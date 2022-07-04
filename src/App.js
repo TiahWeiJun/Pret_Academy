@@ -17,6 +17,10 @@ import GameOverPage from "./pages/GameOverPage/gameOverPage";
 import ConsequencePage from "./pages/ConsequencePage/consequencePage";
 import { createContext } from "react";
 import ContactPage from "./pages/ContactPage/contactPage";
+import Day11Page from "./pages/Day11/day11";
+import Day12Page from "./pages/Day12/day12";
+import Day13Page from "./pages/Day13/day13";
+import Day14Page from "./pages/Day14/day14";
 
 export const AppContext = createContext("Unknown");
 
@@ -83,6 +87,10 @@ const App = () => {
           <Route path="/8" element={<Day8Page />} />
           <Route path="/9" element={<Day9Page />} />
           <Route path="/10" element={<Day10Page />} />
+          <Route path="/11" element={<Day11Page />} />
+          <Route path="/12" element={<Day12Page />} />
+          <Route path="/13" element={<Day13Page />} />
+          <Route path="/14" element={<Day14Page />} />
           <Route path="/completion" element={<CompletionPage />} />
           <Route path="/gameOver" element={<GameOverPage />} />
           <Route path="/consequence" element={<ConsequencePage />} />

@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "../Day1/day1.css";
 import { useNavigate } from "react-router-dom";
 import Layout from "../../layout";
 import { AppContext } from "../../App";
 
-const Day7Page = () => {
+const Day12Page = () => {
   const {
     day,
     setDay,
@@ -33,8 +33,9 @@ const Day7Page = () => {
   } = useContext(AppContext);
 
   const Navigate = useNavigate();
+
   const greennextPage = () => {
-    const newBalance = totalBalance - 30;
+    const newBalance = totalBalance - 200;
     if (newBalance <= 0) {
       Navigate("/gameOver");
       setTotalBalance(newBalance);
@@ -42,39 +43,37 @@ const Day7Page = () => {
     }
 
     setTotalBalance(newBalance);
-
     setStrikeTitle("");
     setMessage1(
-      "Your daughter comes home from USS and tells you about the wonderful time she had!"
+      "In Singapore, the rental rates are tiered, dependent on gross household incomes."
     );
-    setMessage2("");
+    setMessage2(
+      "If one's income crosses a certain threshold, they either have their rental increased, or possibly not be eligible to rent directly from HDB"
+    );
     setMessage3("");
     setWarning("");
 
     setPlayAlarm(false);
+
     Navigate("/consequence", { replace: true });
   };
   const pinknextPage = () => {
-    setStrikeTitle("Family Strike");
-    setMessage1("Mom guilt is REAL!");
-    setMessage2(
-      "You daughter is dissapointed and feels left out of feeling 'normal' and being with her friends. She starts withdrawing at home. "
+    setStrikeTitle("Work Strike");
+    setMessage1(
+      "While you were able to get a reduction of your rental to the current rates ($120) and get a reprieve to pay your rent 2 weeks later, but taking no-pay leave when you have only just started work makes your boss unhappy and earned you a work strike! "
     );
+    setMessage2("Do YOU still have your job?");
     setMessage3("");
     setWarning("");
 
-    const newFamilyStrike = familyStrike + 1;
-    setFamilyStrike(newFamilyStrike);
-    if (newFamilyStrike === 3) {
+    const newWorkStrike = workStrike + 1;
+    setWorkStrike(newWorkStrike);
+    if (newWorkStrike === 3) {
       setWarning(
-        "You have 3 family strikes. This will earn you a visit from a concerned social worker as you are deemed as not being able to care for your children in the best possible way. The stress from being seen as an incompetent mother and worry about your children being taken from you earns you a Health Strike as well. "
-      );
-      setHealthStrike((strike) => strike + 1);
-    } else if (newFamilyStrike === 5) {
-      setWarning(
-        "You have 5 family strikes and your children will be taken away "
+        "Accumulating 3 Work Strikes could result in you losing your job!"
       );
     }
+
     setPlayAlarm(false);
     Navigate("/consequence", { replace: true });
   };
@@ -83,21 +82,22 @@ const Day7Page = () => {
     <Layout leftChoice={greennextPage} rightChoice={pinknextPage}>
       <div className="day1">
         <div className="question">
-          <p id="situation">Situation: </p> Your daughter's school is organising
-          a trip to Universal studios but you would need to pay $30.
+          <p id="situation">Situation: </p> Your tenancy is up for renewal, as a
+          result of your new job, your rent is increased to to $200 with
+          immediate effect.
         </div>
         <div className="centerdiv">
           <div className="greenans-one" onClick={greennextPage}>
             <button type="button" className="greenbtn">
-              <p className="greenchoice">-$30</p>
-              <p className="word">Pay $30</p>
+              <p className="greenchoice">-$200</p>
+              <p className="word">Accept it</p>
             </button>
           </div>
           <div className="pinkans-one" onClick={pinknextPage}>
             <button type="button" className="redbtn">
               <p className="redchoice">-$0</p>
               <p className="word">
-                Don’t pay and keep your child in studentcare that day
+                Take a leave to go to HDB branch office to get a rent reduction
               </p>
             </button>
           </div>
@@ -107,4 +107,4 @@ const Day7Page = () => {
   );
 };
 
-export default Day7Page;
+export default Day12Page;

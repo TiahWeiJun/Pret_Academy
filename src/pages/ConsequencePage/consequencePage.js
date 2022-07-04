@@ -10,7 +10,7 @@ const ConsequencePage = () => {
   const Navigate = useNavigate();
 
   const nextPage = () => {
-    if (day === 10) {
+    if (day === 14) {
       Navigate(`/completion`, { replace: true });
     } else {
       Navigate(`/${day + 1}`, { replace: true });

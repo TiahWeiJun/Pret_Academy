@@ -15,7 +15,7 @@ const CompletionPage = () => {
   return (
     <div className="mainDiv">
       <div className="firstLine">
-        Congratulations on making it past 10 days with ${totalBalance} left!
+        Congratulations on making it past 14 days with ${totalBalance} left!
       </div>
       <div className="secondLine">
         Do you think you could have survived till the end of the month?

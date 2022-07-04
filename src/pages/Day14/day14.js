@@ -1,10 +1,10 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "../Day1/day1.css";
 import { useNavigate } from "react-router-dom";
 import Layout from "../../layout";
 import { AppContext } from "../../App";
 
-const Day7Page = () => {
+const Day14Page = () => {
   const {
     day,
     setDay,
@@ -33,8 +33,9 @@ const Day7Page = () => {
   } = useContext(AppContext);
 
   const Navigate = useNavigate();
+
   const greennextPage = () => {
-    const newBalance = totalBalance - 30;
+    const newBalance = totalBalance - 300;
     if (newBalance <= 0) {
       Navigate("/gameOver");
       setTotalBalance(newBalance);
@@ -42,39 +43,35 @@ const Day7Page = () => {
     }
 
     setTotalBalance(newBalance);
-
     setStrikeTitle("");
     setMessage1(
-      "Your daughter comes home from USS and tells you about the wonderful time she had!"
+      "Your son performed well at the tournament and his teachers were impressed with his public speaking skills and maturity."
     );
-    setMessage2("");
-    setMessage3("");
+    setMessage2(
+      "Your son came back confident and very grateful for an experience of a lifetime."
+    );
+    setMessage3("Remove 1 Family Strike.");
     setWarning("");
 
+    if (familyStrike - 1 < 0) {
+      setFamilyStrike(0);
+    } else {
+      setFamilyStrike((strike) => strike - 1);
+    }
+
     setPlayAlarm(false);
+
     Navigate("/consequence", { replace: true });
   };
   const pinknextPage = () => {
-    setStrikeTitle("Family Strike");
-    setMessage1("Mom guilt is REAL!");
-    setMessage2(
-      "You daughter is dissapointed and feels left out of feeling 'normal' and being with her friends. She starts withdrawing at home. "
+    setStrikeTitle("");
+    setMessage1(
+      "Investment in your child's education and future opportunities are important.  "
     );
-    setMessage3("");
+    setMessage2("But it comes at a cost.");
+    setMessage3("Can you afford it?");
     setWarning("");
 
-    const newFamilyStrike = familyStrike + 1;
-    setFamilyStrike(newFamilyStrike);
-    if (newFamilyStrike === 3) {
-      setWarning(
-        "You have 3 family strikes. This will earn you a visit from a concerned social worker as you are deemed as not being able to care for your children in the best possible way. The stress from being seen as an incompetent mother and worry about your children being taken from you earns you a Health Strike as well. "
-      );
-      setHealthStrike((strike) => strike + 1);
-    } else if (newFamilyStrike === 5) {
-      setWarning(
-        "You have 5 family strikes and your children will be taken away "
-      );
-    }
     setPlayAlarm(false);
     Navigate("/consequence", { replace: true });
   };
@@ -83,22 +80,22 @@ const Day7Page = () => {
     <Layout leftChoice={greennextPage} rightChoice={pinknextPage}>
       <div className="day1">
         <div className="question">
-          <p id="situation">Situation: </p> Your daughter's school is organising
-          a trip to Universal studios but you would need to pay $30.
+          <p id="situation">Situation: </p> Your son has been selected to
+          represent his school at an international debate tournament in Hong
+          Kong. Hotel Stay and expenses will be covered but you will still need
+          to pay for his flight
         </div>
         <div className="centerdiv">
           <div className="greenans-one" onClick={greennextPage}>
             <button type="button" className="greenbtn">
-              <p className="greenchoice">-$30</p>
-              <p className="word">Pay $30</p>
+              <p className="greenchoice">-$300</p>
+              <p className="word">Pay for the Flight </p>
             </button>
           </div>
           <div className="pinkans-one" onClick={pinknextPage}>
             <button type="button" className="redbtn">
               <p className="redchoice">-$0</p>
-              <p className="word">
-                Don’t pay and keep your child in studentcare that day
-              </p>
+              <p className="word">Forego the opportunity</p>
             </button>
           </div>
         </div>
@@ -107,4 +104,4 @@ const Day7Page = () => {
   );
 };
 
-export default Day7Page;
+export default Day14Page;
