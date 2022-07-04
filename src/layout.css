@@ -1,6 +1,7 @@
 .layoutContainer {
   display: flex;
-
+  min-width: 100vw;
+  position: absolute;
   min-height: 100vh;
   justify-content: space-between;
   background-color: #f08a98;

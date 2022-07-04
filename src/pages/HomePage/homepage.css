@@ -5,6 +5,8 @@
   justify-content: space-around;
   align-items: center;
   min-height: 100vh;
+  min-width: 100vw;
+  position: absolute;
 }
 .introtext {
   text-align: center;
@@ -14,7 +16,6 @@
   align-items: center;
   display: flex;
   justify-content: center;
-  width: 100%;
 }
 #background {
   font-size: 30px;
