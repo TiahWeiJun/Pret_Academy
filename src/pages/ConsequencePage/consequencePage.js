@@ -22,7 +22,7 @@ const ConsequencePage = () => {
     <div className="background">
       <div className="solid">
         <div className="box">
-          <p className="title">RESULT</p>
+          <p className="title">CONSEQUENCE</p>
           <p className="strike">{strikeTitle}</p>
           <p className="message">{message1}</p>
           <p className="message">{message2}</p>

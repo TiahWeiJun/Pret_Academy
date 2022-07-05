@@ -48,6 +48,8 @@
   flex-direction: row;
   align-items: center;
   width: 480px;
+  background-color: white;
+  border-radius: 20px;
 }
 
 .greenbtn:hover {
@@ -69,12 +71,14 @@
 
 .redbtn {
   border: 2px solid #f44336;
+  border-radius: 20px;
   color: red;
   font-size: 30px;
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 480px;
+  background-color: white;
 }
 
 .redbtn:hover {

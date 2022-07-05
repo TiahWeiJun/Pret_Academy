@@ -1,42 +1,41 @@
-.centraldiv {
-  background-color: #f08a98;
+.entire {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
   align-items: center;
   min-height: 100vh;
   min-width: 100vw;
   position: absolute;
 }
-.introtext {
-  text-align: center;
-}
-.spacearounddiv {
-  /*border: 2px solid green;*/
-  align-items: center;
+
+.leftSide {
+  width: 50%;
+  height: 100vh;
   display: flex;
   justify-content: center;
-}
-#background {
-  font-size: 30px;
-}
-#gamename {
-  /*border: 1px solid red;*/
-  font-size: 40px;
-  margin-left: 50px;
-}
-.uncomfortableli {
-  float: left;
-}
-ul {
-  list-style-position: outside;
-}
-li {
-  color: black;
-  font-size: 25px;
+  align-items: center;
 }
 
-.buttonspace {
+.rightSide {
+  width: 50%;
+  height: 100vh;
+  background-color: #eb5c70;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.titleH {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 82px;
+  margin-left: 90px;
+  margin-bottom: 5px;
+}
+
+.firstLetter {
+  color: #d1dca0;
+}
+
+.buttonHome {
   text-align: center;
   font-size: 22px;
   display: flex;
@@ -45,49 +44,18 @@ li {
   margin-top: 30px;
   background-color: #774c98;
   color: white;
-  padding: 13px 25px;
+  padding: 13px 40px;
   border-radius: 10px;
   font-size: "Open Sans";
   font-style: normal;
   font-weight: 550;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
 }
 
-.buttonspace:hover {
+.buttonHome:hover {
   cursor: pointer;
   background-color: #95ae23;
-}
-
-.bg {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-size: 28px;
-  line-height: 40px;
-
-  color: #ffffff;
-}
-
-hr {
-  border: 0.5px solid rgba(255, 255, 255, 0.5);
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-.avatar {
-  margin-right: 25px;
-}
-
-.babydiv {
-  width: 450px;
-  margin-left: 25px;
-}
-
-.titleHome {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 60px;
-  line-height: 82px;
-  /* identical to box height */
-
-  color: #ffffff;
 }

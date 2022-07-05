@@ -61,20 +61,44 @@ const Layout = ({ children, leftChoice, rightChoice }) => {
         <div className="strikeContainer">
           <div className="strikeDiv">
             <span>Family Strikes</span>
-            <p>{familyStrike}</p>
+            {familyStrike === 0 ? (
+              <p style={{ fontSize: "25px" }}>{familyStrike}</p>
+            ) : (
+              <p style={{ color: "red", fontWeight: "bold", fontSize: "25px" }}>
+                {familyStrike}
+              </p>
+            )}
           </div>
 
           <div className="strikeDiv">
             <span>Health Strikes</span>
-            <p>{healthStrike}</p>
+            {healthStrike === 0 ? (
+              <p style={{ fontSize: "25px" }}>{healthStrike}</p>
+            ) : (
+              <p style={{ color: "red", fontWeight: "bold", fontSize: "25px" }}>
+                {healthStrike}
+              </p>
+            )}
           </div>
           <div className="strikeDiv">
             <span>Work Strikes</span>
-            <p>{workStrike}</p>
+            {workStrike === 0 ? (
+              <p style={{ fontSize: "25px" }}>{workStrike}</p>
+            ) : (
+              <p style={{ color: "red", fontWeight: "bold", fontSize: "25px" }}>
+                {workStrike}
+              </p>
+            )}
           </div>
           <div className="strikeDiv">
             <span>Social Strikes</span>
-            <p>{socialStrike}</p>
+            {socialStrike === 0 ? (
+              <p style={{ fontSize: "25px" }}>{socialStrike}</p>
+            ) : (
+              <p style={{ color: "red", fontWeight: "bold", fontSize: "25px" }}>
+                {socialStrike}
+              </p>
+            )}
           </div>
         </div>
       </div>

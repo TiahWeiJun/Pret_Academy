@@ -1,6 +1,5 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import HomePage from "./pages/HomePage/homePage";
 import Day1Page from "./pages/Day1/day1";
 import { useState } from "react";
 import Day2Page from "./pages/Day2/day2";
@@ -21,6 +20,9 @@ import Day11Page from "./pages/Day11/day11";
 import Day12Page from "./pages/Day12/day12";
 import Day13Page from "./pages/Day13/day13";
 import Day14Page from "./pages/Day14/day14";
+import PersonaPage from "./pages/PersonaPage/personaPage";
+import HomePage from "./pages/HomePage/homePage";
+import InstructionPage from "./pages/InstructionPage/instructionPage";
 
 export const AppContext = createContext("Unknown");
 
@@ -76,6 +78,8 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/instruction" element={<InstructionPage />} />
+          <Route path="/persona" element={<PersonaPage />} />
 
           <Route path="/1" element={<Day1Page />} />
           <Route path="/2" element={<Day2Page />} />

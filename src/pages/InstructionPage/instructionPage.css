@@ -1,0 +1,48 @@
+.InstructionWhole {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  position: absolute;
+  padding: 50px;
+}
+
+.instructionTitle {
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.instructionMessages {
+  font-size: 30px;
+  line-height: 100px;
+}
+
+.buttonInstruction {
+  text-align: center;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  background-color: #774c98;
+  color: white;
+  padding: 13px 25px;
+  border-radius: 10px;
+  font-size: "Open Sans";
+  font-style: normal;
+  font-weight: 550;
+  width: 150px;
+}
+
+.buttonInstruction:hover {
+  cursor: pointer;
+  background-color: #95ae23;
+}
+
+.btnCont {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
